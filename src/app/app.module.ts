@@ -15,12 +15,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
+import { ContactComponent } from './contact/contact.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -29,10 +30,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent,
     HomeComponent,
-    ContactComponent,
+    AboutComponent,
     MenuComponent,
+    ContactComponent,
     DishdetailComponent
   ],
   imports: [
@@ -46,7 +47,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FlexLayoutModule,
     AppRoutingModule
   ],
-  providers: [DishService, PromotionService],
+  providers: [LeaderService, DishService, PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
